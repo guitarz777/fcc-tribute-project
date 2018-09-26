@@ -1,0 +1,58 @@
+.main {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:"h h h"
+                      ". m ."
+                      "a m .";
+
+}
+
+.header {
+  grid-area: h;
+  background: blue;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "  .   title   .  "
+                       "links links links";
+
+
+}
+#title {
+  font-size: 48px;
+  font-family: serif;
+  grid-area: title;
+  justify-self: center;
+
+}
+.equations {
+  grid-area: a;
+  background: red
+}
+nav {
+  grid-area: links;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+nav > p {
+  justify-self: center;
+  margin: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+  background: red;
+  box-shadow: 1px 2px 0px 1px #000000;
+  border-radius: 1px
+
+}
+
+}
+.image-div {
+  grid-area: p;
+  align-self: center;
+}
+.content{
+  grid-area: m;
+}
+body {
+  background: hsl(204, 8%, 81%);
